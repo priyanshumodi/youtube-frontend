@@ -32,7 +32,7 @@ const UserDetail = () => {
     event.preventDefault();
     dispatch(toggleLoading());
     try {
-      const response = await axios.post(`/api/v1/users/logout`);
+      const response = await axios.post(`https://youtube-backend-rw43.onrender.com/api/v1/users/logout`);
       console.log('logout', response)
       dispatch(removeUser())
       navigate('/user/login')

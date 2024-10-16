@@ -99,7 +99,7 @@ const VideoDetails = () => {
 
   const handleToggleLike = async () => {
     try {
-      const result = await axios.post(`/api/v1/likes/toggle/v/${id}`)
+      const result = await axios.post(`https://youtube-backend-rw43.onrender.com/api/v1/likes/toggle/v/${id}`)
       // console.log(result)
       if(result?.data?.data?.acknowledged) {
         setLike(like-1)
@@ -114,7 +114,7 @@ const VideoDetails = () => {
   }
 
   const handleToggleSubscribe = async() => {
-    const response = await axios.post(`/api/v1/subscriptions/c/${video?.owner?._id}`)
+    const response = await axios.post(`https://youtube-backend-rw43.onrender.com/api/v1/subscriptions/c/${video?.owner?._id}`)
     // console.log(response)
     if(response?.data?.data?.acknowledged) {
       setSubscribe(false);

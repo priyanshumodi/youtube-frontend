@@ -45,7 +45,7 @@ const UserCommunity = () => {
   dispatch(toggleLoading())
 
   try {
-    const result = await axios.post(`/api/v1/tweet`,{content:postText})
+    const result = await axios.post(`https://youtube-backend-rw43.onrender.com/api/v1/tweet`,{content:postText})
     console.log(result)
     dispatch(toggleLoading())
     dispatch(addUpdateComment(`new${updateMessage}`))

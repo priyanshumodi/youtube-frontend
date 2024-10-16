@@ -39,7 +39,7 @@ function App() {
 
   const fetchUserData = async () => {
     try {
-      const response = await axios.get('/api/v1/users/current-user');
+      const response = await axios.get('https://youtube-backend-rw43.onrender.com/api/v1/users/current-user');
       const result = response.data
       console.log('api response',result)
       dispatch(addUser(result.data))

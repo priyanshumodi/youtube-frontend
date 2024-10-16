@@ -32,7 +32,7 @@ const AddVideo = () => {
     const handleCheckboxChange = async (playlistId) => {
         try {
             dispatch(toggleLoading())
-            const response = await axios.patch(`/api/v1/playlist/add/${videoId}/${playlistId}`)
+            const response = await axios.patch(`https://youtube-backend-rw43.onrender.com/api/v1/playlist/add/${videoId}/${playlistId}`)
             console.log(response)
             window.history.back()
         } catch (error) {

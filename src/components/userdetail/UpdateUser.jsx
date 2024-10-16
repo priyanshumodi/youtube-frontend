@@ -29,7 +29,7 @@ const UpdateUser = () => {
     
     try {
         dispatch(toggleLoading());
-      const response = await axios.patch(`/api/v1/users/update-account`, detail)
+      const response = await axios.patch(`https://youtube-backend-rw43.onrender.com/api/v1/users/update-account`, detail)
       // console.log('update avatar', response)
       setDetail({
         fullName: '',

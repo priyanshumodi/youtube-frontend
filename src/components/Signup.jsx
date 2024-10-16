@@ -68,7 +68,7 @@ const Signup = () => {
         formData.append('coverImage', coverImage)
 
         try {
-            const response = await axios.post('/api/v1/users/register',formData, {
+            const response = await axios.post('https://youtube-backend-rw43.onrender.com/api/v1/users/register',formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

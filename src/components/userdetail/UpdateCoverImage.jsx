@@ -31,7 +31,7 @@ const UpdateCoverImage = () => {
     const formData = new FormData()
     formData.append('coverImage', coverImage)
     try {
-      const response = await axios.patch(`/api/v1/users/cover-image`, formData, {
+      const response = await axios.patch(`https://youtube-backend-rw43.onrender.com/api/v1/users/cover-image`, formData, {
           headers: {
               'Content-Type': 'multipart/form-data'
           }

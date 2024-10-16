@@ -29,7 +29,7 @@ const CreatePlaylist = () => {
     
     try {
         dispatch(toggleLoading());
-        const response = await axios.post(`/api/v1/playlist`, detail)
+        const response = await axios.post(`https://youtube-backend-rw43.onrender.com/api/v1/playlist`, detail)
      
         setDetail({
           name: '',

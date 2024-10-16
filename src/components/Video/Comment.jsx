@@ -60,7 +60,7 @@ const Comment = ({video}) => {
       dispatch(toggleLoading())
 
       try {
-        const result = await axios.post(`/api/v1/comments/${video?._id}`,{comment})
+        const result = await axios.post(`https://youtube-backend-rw43.onrender.com/api/v1/comments/${video?._id}`,{comment})
         console.log(result)
         dispatch(toggleLoading())
         dispatch(addUpdateComment(`new${updateComment}`))
@@ -74,7 +74,7 @@ const Comment = ({video}) => {
       dispatch(toggleLoading())
 
       try {
-        const result = await axios.delete(`/api/v1/comments/c/${id}`);
+        const result = await axios.delete(`https://youtube-backend-rw43.onrender.com/api/v1/comments/c/${id}`);
         console.log(result)
         dispatch(toggleLoading())
         dispatch(addUpdateComment(`delete${id}`))
