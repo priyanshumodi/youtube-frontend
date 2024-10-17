@@ -12,7 +12,7 @@ const LandingPage = () => {
   useEffect(() => {
     if(!isAuthenticated) {
       const timer = setTimeout(() => {
-        authenticate(navigate,   isAuthenticated);
+        navigate('user/login')
       }, 1000);
     }
     return () => clearTimeout(timer);
