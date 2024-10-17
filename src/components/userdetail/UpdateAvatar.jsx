@@ -30,7 +30,7 @@ const UpdateAvatar = () => {
       const formData = new FormData()
       formData.append('avatar', avatar)
       try {
-        const response = await axios.patch(`https://youtube-backend-rw43.onrender.com/api/v1/users/avatar`, formData, {
+        const response = await axios.patch(`/api/v1/users/avatar`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

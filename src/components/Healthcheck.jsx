@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 const Healthcheck = () => {
   const [msg, setMsg] = useState('')
   const response = async () => {
-    const data = await axios.post('https://youtube-backend-rw43.onrender.com/api/v1/users');
+    const data = await axios.post('/api/v1/users');
     // console.log(data.data)
     setMsg(data.data)
   }

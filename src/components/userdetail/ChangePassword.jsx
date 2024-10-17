@@ -34,7 +34,7 @@ const ChangePassword = () => {
     
     try {
         dispatch(toggleLoading());
-      const response = await axios.post(`https://youtube-backend-rw43.onrender.com/api/v1/users/change-password`, detail)
+      const response = await axios.post(`/api/v1/users/change-password`, detail)
     //   console.log('update password', response)
       setDetail({
         password: '',

@@ -50,7 +50,7 @@ const UpdatePlaylist = () => {
     
     try {
         dispatch(toggleLoading());
-        const response = await axios.patch(`https://youtube-backend-rw43.onrender.com/api/v1/playlist/${id}`, detail)
+        const response = await axios.patch(`/api/v1/playlist/${id}`, detail)
      
         setDetail({
           name: '',

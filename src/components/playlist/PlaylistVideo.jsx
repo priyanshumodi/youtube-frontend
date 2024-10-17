@@ -31,7 +31,7 @@ const PlaylistVideo = ({id, playlist}) => {
     const handleDeleteVideo = async () => {
         try {
             dispatch(toggleLoading());
-            const response = await axios.patch(`https://youtube-backend-rw43.onrender.com/api/v1/playlist/remove/${id}/${playlist}`)
+            const response = await axios.patch(`/api/v1/playlist/remove/${id}/${playlist}`)
             console.log(response)
             navigate(`/app/playlist/${playlist}`)
         } catch (error) {

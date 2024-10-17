@@ -55,7 +55,7 @@ const UploadVideo = () => {
         formData.append('thumbnail', upload.thumbnail)
 
         try {
-            const response = await axios.post('https://youtube-backend-rw43.onrender.com/api/v1/videos',formData,{
+            const response = await axios.post('/api/v1/videos',formData,{
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

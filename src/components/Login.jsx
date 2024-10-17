@@ -48,7 +48,7 @@ const Login = () => {
         }
         
         try {
-            const response = await axios.post(`https://youtube-backend-rw43.onrender.com/api/v1/users/login`,loginInfo)
+            const response = await axios.post(`/api/v1/users/login`,loginInfo)
             const result = response.data
             // console.log('API Response:', result);
             if(result.success) {

@@ -31,7 +31,7 @@ const Playlist = () => {
     const handleDeletePlaylist = async () => {
         try {
             dispatch(toggleLoading());
-            const response = await axios.delete(`https://youtube-backend-rw43.onrender.com/api/v1/playlist/${id}`)
+            const response = await axios.delete(`/api/v1/playlist/${id}`)
             // console.log(response)
             window.history.back()
         } catch (error) {

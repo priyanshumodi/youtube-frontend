@@ -22,7 +22,7 @@ const UpdateComment = ({comment}) => {
         dispatch(toggleLoading())
   
         try {
-          const result = await axios.patch(`https://youtube-backend-rw43.onrender.com/api/v1/comments/c/${comment?.comment?._id}`,{newComment})
+          const result = await axios.patch(`/api/v1/comments/c/${comment?.comment?._id}`,{newComment})
           console.log(result)
           dispatch(addUpdateComment(''))
           dispatch(toggleLoading())

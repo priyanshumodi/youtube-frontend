@@ -31,7 +31,7 @@ const CommentContent = () => {
       dispatch(toggleLoading())
 
       try {
-        const result = await axios.delete(`https://youtube-backend-rw43.onrender.com/api/v1/comments/c/${id}`);
+        const result = await axios.delete(`/api/v1/comments/c/${id}`);
         console.log(result)
         dispatch(toggleLoading())
         dispatch(addUpdateComment(`delete${id}`))

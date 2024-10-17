@@ -29,7 +29,7 @@ const UserPost = ({post}) => {
     }
 
     const togglePostLike = async() => {
-        const result = await axios.post(`https://youtube-backend-rw43.onrender.com/api/v1/likes/toggle/t/${post?._id}`)
+        const result = await axios.post(`/api/v1/likes/toggle/t/${post?._id}`)
         console.log(result.data.data)
         if(result?.data?.data?.acknowledged) {
           setPostLikes(postLikes-1)
