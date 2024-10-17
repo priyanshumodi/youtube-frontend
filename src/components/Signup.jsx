@@ -84,7 +84,7 @@ const Signup = () => {
                 coverImage: null
             })
             setLoading(false)
-            return handleSuccess("successfully Login")
+            return handleSuccess("successfully signup")
         } catch (error) {
             setLoading(false)
             return handleError("Something went wrong")
