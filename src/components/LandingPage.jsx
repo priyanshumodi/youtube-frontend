@@ -11,11 +11,8 @@ const LandingPage = () => {
 
   useEffect(() => {
     if(!isAuthenticated) {
-      const timer = setTimeout(() => {
         navigate('user/login')
-      }, 1000);
     }
-    return () => clearTimeout(timer);
   }, [!isAuthenticated]);
 
   return (
