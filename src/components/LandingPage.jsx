@@ -11,7 +11,7 @@ const LandingPage = () => {
 
   useEffect(() => {
     if(!isAuthenticated) {
-        navigate('user/login')
+        navigate('/user/login')
     }
   }, [!isAuthenticated]);
 
