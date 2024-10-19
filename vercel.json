@@ -4,5 +4,14 @@
             "source": "/(.*)",
             "destination": "/"
         }
+    ],
+    "build": {
+      "command": "npm run build"
+    },
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "https://youtube-backend-rw43.onrender.com"
+      }
     ]
 }
